@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mainDiv">
+        <button id="tweet"><i class="fab fa-twitter" style="color: #1da1f2; position: absolute; bottom: 5%; right: 40%;"></i></button>
+        <div id="quoteDiv"></div>
+        <div id="author"></div>
+        <button id="btn">Next Quote</button>
+    </div>
+
+    <script>
+        const quoteDiv= document.getElementById("quoteDiv");
+        const author= document.getElementById("author");
+        const btn= document.getElementById("btn");
+        const tweet= document.getElementById("tweet");
+
+        let objs= "";
+        let quoteData= "";
+        let authorData= "";
+
+        const sendTweet= ()=>{
+            window.open(`https://twitter.com/intent/tweet?text=${quoteData} ${authorData}`);
+        }
+
+        const getNextQuote= ()=>{
+            let randIndex= Math.round(Math.random()*10);
+            quoteData= objs[randIndex].text;
+            authorData= (objs[randIndex].author == null)?("Unknown"):(objs[randIndex].author);
+            quoteDiv.innerHTML= `${quoteData}`;
+            author.innerHTML= `${authorData}`;
+        }
+
+        const getQuotes= async ()=>{
+            const api= "https://type.fit/api/quotes";
+            try{
+                let awaitData= await fetch(api);
+                objs= await awaitData.json();
+
+                getNextQuote();
+                // console.log(objs[0]);
+            }catch(err){
+                
+            }
+
+        }
+
+        btn.addEventListener("click", getNextQuote);
+        tweet.addEventListener("click", sendTweet);
+        getQuotes();
+    </script>
+</body>
+</html>

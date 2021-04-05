@@ -1,0 +1,35 @@
+body{
+    height: 90vh;
+    background-color: rgb(24, 24, 87);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cont{
+
+}
+#head{
+    text-align: center;
+    text-transform: uppercase;
+    color: peachpuff;
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+    background-color: rgb(87, 48, 0);
+    color: whitesmoke;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+.light{
+    width: 150px;
+}
+#temp{
+    height: 100px;
+    background-color: whitesmoke;
+    color: red;
+    font-size: large;
+}

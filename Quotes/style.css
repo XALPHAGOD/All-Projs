@@ -1,0 +1,59 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0f132b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mainDiv{
+    width: 40%;
+    height: 60%;
+    background-color: rgb(0, 132, 255);
+    padding: 50px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 200px rgba(0, 132, 255, 0.384);
+    overflow: hidden;
+    position: relative;
+}
+#tweet{
+    width: 100px;
+    height: 100px;
+    padding: 0px;
+    background-color: rgb(212, 212, 212);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    transform: rotate(45deg);
+}
+#quoteDiv{
+    height: 65%;
+    padding: 10px;
+    padding-top: 15%;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 22px;
+    overflow: hidden;
+}
+#author{
+    height: 25%;
+    padding: 10px;
+    text-align: right;
+    box-sizing: border-box;
+    font-size: 15px;
+    overflow: hidden;
+}
+#btn{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(212, 212, 212);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+}

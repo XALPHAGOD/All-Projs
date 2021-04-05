@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Counter</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: rgb(0, 0, 65);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cont{
+            width: 200px;
+            height: 200px;
+        }
+        i{
+            color: beige;
+            position: relative;
+            top: 15%;
+            left: 77.5px;
+        }
+        .count{
+            color: burlywood;
+            font-size: 40px;
+            position: relative;
+            top: 15%;
+            left: 90px;
+        }
+        .desc{
+            color: whitesmoke;
+            font-size: 12px;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            text-align: center;
+            position: relative;
+            top: 15%;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="cont">
+        <i class="fa fa-car" style="font-size:45px;"></i>
+        <div class="count" data-target="1000"></div>
+        <div class="desc">Projects Completed</div>
+    </div>
+    
+    <div class="cont">
+        <i class="fa fa-car" style="font-size:45px;"></i>
+        <div class="count" data-target="15000"></div>
+        <div class="desc">Clients</div>
+    </div>
+
+    <div class="cont">
+        <i class="fa fa-car" style="font-size:45px;"></i>
+        <div class="count" data-target="700"></div>
+        <div class="desc">In Progress</div>
+    </div>
+
+    <script>
+        let count= document.querySelectorAll(".count");
+
+        count.forEach( (count)=>{
+            count.innerHTML= 0;
+
+            let upd= ()=>{
+                let target= +count.getAttribute("data-target");
+                let start= Number(count.innerHTML);
+                let incr=target/100;
+                if(start<target){
+                    count.innerHTML= `${start+incr}`;
+                    setTimeout(upd, 10);
+                }
+                else{
+                    count.innerHTML= `${target}`;
+                }
+            }
+
+            upd();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+body{
+    height: 100vh;
+    margin: 0px;
+}
+#heading{
+    height: 35px;
+    background-color: rgb(252, 235, 0);
+    padding: 5px;
+    word-spacing: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0px 200px rgb(252, 235, 0);
+}
+#addbtn{
+    padding: 20px;
+}
+#add{
+    width: 80px;
+    height: 25px;
+    background-color: rgb(252, 235, 0);
+    padding: 0px;
+    cursor: pointer;
+    border: 0px;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0px 200px rgba(255, 238, 0, 0.603);
+    position: relative;
+    left: calc(100% - 80px);
+}
+.oper{
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+.note{
+    width: 200px;
+    height: 150px;
+    margin: 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.edi{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(22, 192, 0);
+    color: whitesmoke;
+    padding: 0px;
+    cursor: pointer;
+    border: 0px;
+    outline: none;
+    border-radius: 50%;
+    position: relative;
+    left: calc(100% - 50px);
+    box-shadow: 0 0 5px #1aff00;
+}
+.edi:hover{
+    background-color: whitesmoke;
+    color: rgb(22, 192, 0);
+}
+.del{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 0, 0);
+    color: whitesmoke;
+    padding: 0px;
+    cursor: pointer;
+    border: 0px;
+    outline: none;
+    border-radius: 50%;
+    position: relative;
+    left: calc(100% - 50px);
+    box-shadow: 0 0 5px #ff0000;
+}
+.del:hover{
+    background-color: whitesmoke;
+    color: rgb(255, 0, 0);
+}
+.showinp{
+    width: 200px;
+    height: 115px;
+    background-color: whitesmoke;
+    padding: 5px;
+    border: 0px;
+    outline: none;
+    border-radius: 10px;
+    overflow-y: auto;
+    resize: none;
+    box-sizing: border-box;
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
+    box-shadow: 0 1px 10px rgb(247, 228, 123);
+}
+.takeinp{
+    width: 200px;
+    height: 115px;
+    background-color: whitesmoke;
+    padding: 5px;
+    border: 0px;
+    outline: none;
+    border-radius: 10px;
+    overflow-y: auto;
+    resize: none;
+    box-sizing: border-box;
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
+}
+
+.hide{
+    display: none;
+}

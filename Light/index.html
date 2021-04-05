@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fontawesome.com/v4.7.0/cheatsheet/">
+</head>
+<body>
+    <div id="cont">
+        <h2 id="head">Press The Switches</h2>
+        <button class="btn" onclick="document.getElementById('image').src='on.png' ">On</button>
+        <img src="off.png" id="image" class="light">
+        <button class="btn" onclick="document.getElementById('image').src='off.png' ">Off</button>
+
+        <div id="temp" class="fa"></div>
+    </div>
+
+    <script>
+        
+        let therm= ()=>{
+            let t= document.getElementById("temp");
+            t.innerHTML= "&#xf2cb";
+        }
+        therm();
+    </script>
+</body>
+</html>

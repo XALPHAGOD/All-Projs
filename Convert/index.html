@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert</title>
+    
+    <style>
+        body{
+            height: 90vh;
+            background-color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #d{
+            width: 400px;
+            height: 300px;
+            border-radius: 30px;
+            background-color: lightsalmon;
+            box-shadow: 0 10px 20px #d5afaf;
+        }
+        #hd3{
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: relative;
+            top: 25%;
+        }
+        #conv{
+            width: fit-content;
+            position: relative;
+            top: 25%;
+        }
+        #temp{
+            width: 90px;
+            height: 30px;
+            border: 0px;
+            outline: none;
+            border-radius: 7px;
+            padding: 0px 0px 0px 10px;
+            position: relative;
+            left: 53%;
+            box-sizing: border-box;
+        }
+        #diff{
+            width: 90px;
+            height: 30px;
+            border: 0px;
+            outline: none;
+            border-radius: 7px;
+            position: relative;
+            left: 63%;
+        }
+        #res{
+            position: relative;
+            top: 40%;
+            left: 40%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="d">
+        <h3 id="hd3">Enter Temperature</h3>
+        <form id="conv" onsubmit="fun(); return false">
+            <input type="number" id="temp">
+            <select id="diff">
+                <option value="cel">Celsius</option>
+                <option value="fah">Fahrenheit</option>
+            </select>
+        </form>
+        <div id="res"></div>
+    </div>
+    
+
+    <script>
+        let fun= ()=>{
+            let val= document.getElementById("temp").value;
+            
+            let sel= document.getElementById("diff");
+            let opt= diff.options[sel.selectedIndex].value;
+
+            // console.log(val);
+            // console.log(opt);
+            
+            let res;
+            if(opt == "cel"){
+                res = Math.round((9*val)/5 +32);
+                document.getElementById("res").innerHTML= `${res} Fahrenheit`;
+            }     
+            else{
+                res = Math.round(((val-32)*5)/9);
+                document.getElementById("res").innerHTML= `${res} Celsius`;
+            }
+        }
+    </script>
+</body>
+</html>
