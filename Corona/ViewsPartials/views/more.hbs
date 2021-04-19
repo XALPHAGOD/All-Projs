@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{>links}}
+    <link rel="stylesheet" href="css/more.css">
+
+    <title>More</title>
+</head>
+<body>
+    
+    {{>navbar}}
+
+        <div id="search">
+            <form id="inpForm">
+                <input id="code" placeholder=" Enter Country Code" autocomplete="off">
+            </form>
+            <button id="morebtn">Go</button>
+        </div>
+        
+        <div id="output">
+            <p id="ophead"></p>
+            <p id="nconf"></p>
+            <p id="tconf"></p>
+            <p id="ndea"></p>
+            <p id="tdea"></p>
+            <p id="nrec"></p>
+            <p id="trec"></p>
+        </div>
+        
+    {{>footer}}
+
+    <script src="js/specific.js"></script>
+
+    {{>js}}
+
+</body>
+</html>

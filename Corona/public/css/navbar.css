@@ -1,0 +1,31 @@
+.navbar-custom{
+    background-color: rgb(156, 148, 255);
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+.navbar-toggler{
+    background-color: #4b2a9f;
+}
+.navbar-brand{
+    margin: 0 2rem;
+    color: whitesmoke;
+    font-size: 1.4rem;
+}
+.navbar-toggler{
+    width: 2.5rem;
+    height: 1.4rem;
+    padding: 0;
+    border: none;
+    margin-right: 7%;
+    outline: none;
+    border-radius: 0 50%;
+}
+.navbar-toggler:focus{
+    outline: none;
+}
+.navbar li{
+    margin-right: 2rem;
+}
+.navbar a{
+    font-size: 1.2rem;
+}

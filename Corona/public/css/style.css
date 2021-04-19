@@ -1,0 +1,41 @@
+*{
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+}
+a{
+    color: whitesmoke;
+}
+a:hover{
+    color: rgb(9, 255, 0);
+}
+
+.main_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#refresh{
+    width: 5rem;
+    margin-bottom: 2rem;
+    background-color: yellow;
+    border: none;
+    outline: none;
+}#refresh:hover{
+    background-color: whitesmoke;
+    box-shadow: 0 1px 50px yellow;
+}
+.table-custom{
+    width: 70vw;
+    margin-bottom: 2rem;
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{>links}}
+
+    <title>Home</title>
+
+</head>
+<body id="bdy">
+
+    {{>navbar}}
+
+      <div>
+        <h1 class="text-center" style="margin-bottom: 2rem;">Let's Stay Safe And Fight Together Against Corona Virus</h1>
+      </div>
+      <div class="main_cont">
+        <div class="mb-3">
+          <h3 class="text-center">Top-10 Countries by Total Confirmed</h3>
+        </div>
+        {{!-- <button id="refresh"><i class="fas fa-sync-alt"></i> Refresh</button> --}}
+        <div class="table-responsive table-custom">
+          <table class="table table-bordered table-striped table-hover text-center" id="tabval">
+          </table>
+        </div>
+      </div>
+
+    {{>footer}}
+
+    <script src="js/top10.js"></script>
+
+    {{>js}}
+
+</body>
+</html>
