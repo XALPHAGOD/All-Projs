@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <h2 style="text-align: center;"><a href="/api/products">Products</a></h2>
+
+    <h3>Normal Form</h3>
+    <form action="/login" method="post">
+        <input type="text" name="userName" id="name" placeholder="Name" autocomplete="off">
+        <input type="number" name="userAge" id="age" placeholder="Age" autocomplete="off">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Javascript Form</h3>
+    <form>
+        <input type="text" name="name" id="userName" placeholder="Name" autocomplete="off">
+        <input type="number" name="age" id="userAge" placeholder="Age" autocomplete="off">
+        <button type="submit" id="submit_btn">Submit</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <script>
+        const submit_btn= document.getElementById("submit_btn");
+        const userName= document.getElementById("userName");
+        const userAge= document.getElementById("userAge");
+
+        submit_btn.addEventListener("click", async (event)=>{
+            event.preventDefault();
+            // console.log(userName.value);
+            // console.log(userAge.value);
+
+            try {
+
+                // const getResp= await axios.get("/api/products");
+                // console.log(getResp);
+
+                const postResp= await axios.post("/login", {userName: userName.value, userAge: userAge.value});
+                console.log(postResp.data);
+
+            } catch (error) {
+                console.log(error);  
+            }
+
+            userName.value= "";
+            userAge.value= "";
+        });
+    </script>
+</body>
+</html>
