@@ -43,7 +43,7 @@ const AddReview = props => {
       RestaurantDataService.createReview(data)
         .then(response => {
           setSubmitted(true);
-          console.log(response.data);
+          // console.log(response.data);
         })
         .catch(e => {
           console.log(e);
@@ -75,6 +75,7 @@ const AddReview = props => {
                 value={review}
                 onChange={handleInputChange}
                 name="review"
+                autoComplete="off"
               />
             </div>
             <button onClick={saveReview} className="btn btn-success">
