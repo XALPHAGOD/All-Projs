@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Sorting</title>
+</head>
+<body style="height: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5">
+        <div class="container-fluid">
+            <span class="navbar-brand pt-0 pb-1 mx-5">Sorting</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="btn text-white" onclick="bubble()">Bubble</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn text-white" onclick="cocktail()">Cocktail</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn text-white" onclick="selection()">Selection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn text-white" onclick="insertion()">Insertion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn text-white" onclick="merge()">Merge</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn text-white" onclick="quick()">Quick</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+      <div class="d-flex flex-column justify-content-center align-items-center" style="height: 80vh;">
+        <div id="display" class="d-flex align-items-end" style="width:fit-content; height: 100%;"></div>
+      </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./common.js"></script>
+    <script src="./bubble.js"></script>
+    <script src="./cocktail.js"></script>
+    <script src="./selection.js"></script>
+    <script src="./insertion.js"></script>
+    <script src="./merge.js"></script>
+    <script src="./quick.js"></script>
+</body>
+</html>
