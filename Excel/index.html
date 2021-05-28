@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="title min-height" style="border-bottom: 1px solid white;">Excel Clone</div>
+
+        <div class="menu min-height">
+            <div class="btn-group" role="group">
+                <input type="radio" class="btn-check" name="menu-items" id="File" autocomplete="off">
+                <label class="btn btn-outline-custom shadow-none" for="File">File</label>
+              
+                <input type="radio" class="btn-check" name="menu-items" id="Home" autocomplete="off" checked>
+                <label class="btn btn-outline-custom shadow-none" for="Home">Home</label>
+              
+                <input type="radio" class="btn-check" name="menu-items" id="Insert" autocomplete="off">
+                <label class="btn btn-outline-custom shadow-none" for="Insert">Insert</label>
+              
+                <input type="radio" class="btn-check" name="menu-items" id="Page Layout" autocomplete="off">
+                <label class="btn btn-outline-custom shadow-none" for="Page Layout">Page Layout</label>
+              
+                <input type="radio" class="btn-check" name="menu-items" id="Formulas" autocomplete="off">
+                <label class="btn btn-outline-custom shadow-none" for="Formulas">Formulas</label>
+              
+                <input type="radio" class="btn-check" name="menu-items" id="Data" autocomplete="off">
+                <label class="btn btn-outline-custom shadow-none" for="Data">Data</label>
+              
+                <input type="radio" class="btn-check" name="menu-items" id="Review" autocomplete="off">
+                <label class="btn btn-outline-custom shadow-none" for="Review">Review</label>
+              
+                <input type="radio" class="btn-check" name="menu-items" id="View" autocomplete="off">
+                <label class="btn btn-outline-custom shadow-none" for="View">View</label>
+            </div>
+        </div>
+
+        <div class="menu-icons" style="min-height: 4vh; display: flex; align-items: center;">
+            <button type="button" class="btn btn-custom shadow-none" data-bs-toggle="button" autocomplete="off"><span class="material-icons menu-icon">format_bold</span></button>
+            <button type="button" class="btn btn-custom shadow-none" data-bs-toggle="button" autocomplete="off"><span class="material-icons menu-icon">format_italic</span></button>
+            <button type="button" class="btn btn-custom shadow-none" data-bs-toggle="button" autocomplete="off"><span class="material-icons menu-icon">format_underlined</span></button>
+
+            <select class="form-select shadow-none mx-2" id="font">
+                <option style="font-family: Arial, Helvetica, sans-serif;" value="Arial">Arial</option>
+                <option style="font-family: 'Times New Roman', Times, serif;" value="Times New Roman">Times New Roman</option>
+                <option style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" value="Cambria">Cambria</option>
+                <option style="font-family: 'Courier New', Courier, monospace;" value="Courier">Courier</option>
+                <option style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" value="Franklin">Franklin</option>
+                <option style="font-family: Georgia, 'Times New Roman', Times, serif;" value="Georgia">Georgia</option>
+                <option style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" value="Gill Sans">Gill Sans</option>
+                <option style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" value="Impact">Impact</option>
+                <option style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" value="Lucida Sans">Lucida Sans</option>
+                <option style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" value="Segoe UI">Segoe UI</option>
+                <option style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" value="Trebuchet MS">Trebuchet MS</option>
+                <option style="font-family: Verdana, Geneva, Tahoma, sans-serif;" value="Verdana">Verdana</option>
+            </select>
+
+            <select class="form-select shadow-none mx-2" id="size">
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="22">22</option>
+                <option value="24">24</option>
+                <option value="26">26</option>
+                <option value="28">28</option>
+                <option value="36">36</option>
+                <option value="48">48</option>
+                <option value="72">72</option>
+            </select>
+
+            <input type="radio" class="btn-check" name="alignment" id="left" autocomplete="off" checked>
+            <label class="btn btn-custom shadow-none" for="left"><span class="material-icons menu-icon">format_align_left</span></label>
+
+            <input type="radio" class="btn-check" name="alignment" id="center" autocomplete="off">
+            <label class="btn btn-custom shadow-none" for="center"><span class="material-icons menu-icon">format_align_center</span></label>
+            
+            <input type="radio" class="btn-check" name="alignment" id="right" autocomplete="off">
+            <label class="btn btn-custom shadow-none" for="right"><span class="material-icons menu-icon">format_align_right</span></label>
+
+            <div class="dropdown">
+                <button class="btn btn-custom shadow-none dropdown-toggle" type="button" id="color_fill" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="material-icons menu-icon">format_color_fill</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="color_fill">
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-custom shadow-none dropdown-toggle" type="button" id="color_text" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="material-icons menu-icon">format_color_text</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="color_text">
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                </ul>
+            </div>
+
+            <button type="button" class="btn btn-custom shadow-none" autocomplete="off"><span class="material-icons menu-icon">content_cut</span></button>
+            <button type="button" class="btn btn-custom shadow-none" autocomplete="off"><span class="material-icons menu-icon">content_copy</span></button>
+            <button type="button" class="btn btn-custom shadow-none" autocomplete="off"><span class="material-icons menu-icon">content_paste</span></button>
+
+        </div>
+
+        <div class="formula_bar" style="height: 3.5vh;">Formula Bar</div>
+
+        <div class="main-sheet" style="height: 81vh; display: flex; flex-wrap: wrap;">
+            <div class="cc r1 c1"></div>
+            <div class="cc r1 c2"></div>
+            <div class="cc r2 c1"></div>
+            <div class="cc r2 c2"></div>
+        </div>
+
+        <div class="footer d-flex align-items-center" style="height: 3.5vh; padding: 0px 10px;">
+            <button class="border-0 d-flex align-items-center"><span class="material-icons">arrow_left</span></button>
+            <button class="border-0 d-flex align-items-center"><span class="material-icons">arrow_right</span></button>
+            <button class="border-0 d-flex align-items-center" style="color: #217446;"><span class="material-icons">add_circle</span></button>
+
+            <div class="sheet-toggler d-flex align-items-center">
+
+                <input type="radio" class="btn-check" name="sheets" id="sheet1" autocomplete="off" checked>
+                <label class="btn btn-custom shadow-none" for="sheet1">Sheet1</label>
+
+                <input type="radio" class="btn-check" name="sheets" id="sheet2" autocomplete="off">
+                <label class="btn btn-custom shadow-none" for="sheet2">Sheet2</label>
+
+                <input type="radio" class="btn-check" name="sheets" id="sheet3" autocomplete="off">
+                <label class="btn btn-custom shadow-none" for="sheet3">Sheet3</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
