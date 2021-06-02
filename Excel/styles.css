@@ -1,7 +1,10 @@
 :root{
     --background1: #217446;
     --background2: #ffe579;
-    --size: 22px;
+    --cell-width: 60px;
+    --cell-height: 22px;
+    --border-thin: 1px solid lightgray;
+    --border-thick: 2px solid lightgray
 }
 
 *{
@@ -145,11 +148,7 @@ body{
     background-color: #fff;
 }
 
-.cc{
-    border: 1px solid lightgray;
-}
-
-.r1{
+/* .r1{
     height: var(--size);
 }
 
@@ -163,4 +162,109 @@ body{
 
 .c2{
     width: calc(100% - var(--size));
+} */
+
+
+
+#main-sheet{
+    height: 81vh;
+    border-top: var(--border-thick);
+    border-left: var(--border-thick);
+    overflow: scroll;
+    position: relative;
+}
+
+.rowCont-row{
+    display: flex;
+}
+
+#select-all{
+    min-width: var(--cell-width);
+    height: var(--cell-height);
+    border-right: var(--border-thick);
+    border-bottom: var(--border-thick);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.rc-name{
+    min-width: var(--cell-width);
+    height: var(--cell-height);
+    border-right: var(--border-thin);
+    border-bottom: var(--border-thin);
+    font-size: small;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.br-thick{
+    border-right: var(--border-thick);
+}
+
+.bb-thick{
+    border-bottom: var(--border-thick);
+}
+
+.cell{
+    min-width: var(--cell-width);
+    height: var(--cell-height);
+    border-right: var(--border-thin);
+    border-bottom: var(--border-thin);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    outline: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.selected{
+    border: 2px solid var(--background1);
+}
+
+.formula-bar{
+    background-color: lightgray;
+    padding: 0px 3px;
+    display: flex;
+    align-items: center;
+}
+
+.formula-com{
+    height: 85%;
+    background: #fff;
+    padding: 0px 0.7rem;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    outline-color: var(--background1);
+}
+
+#sel-cell-disp{
+    width: 150px;
+    border-radius: 0 15px 15px 0;
+    justify-content: center;
+}
+
+#fx-sign{
+    width: 75px;
+    height: 85%;
+    padding: 0px 2px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#formula{
+    width: calc(100% - 225px);
 }
