@@ -1,10 +1,11 @@
 :root{
     --background1: #217446;
-    --background2: #ffe579;
-    --cell-width: 60px;
+    --background2: #ffe579; 
+    --cell-width: 75px;
     --cell-height: 22px;
     --border-thin: 1px solid lightgray;
-    --border-thick: 2px solid lightgray
+    --border-thick: 2px solid lightgray;
+    --border-green: 2px solid #217446;
 }
 
 *{
@@ -16,6 +17,12 @@
 body{
     min-height: 100vh;
     /* padding: 0px 10px; */
+}
+
+.centralize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .min-height{
@@ -92,7 +99,7 @@ body{
 }
 
 .menu-icons .btn-check:active+.btn-custom, .btn-check:checked+.btn-custom, .btn-custom.active, .btn-custom:active, .show>.btn-custom.dropdown-toggle {
-    background-color: var(--background2);
+    /* background-color: var(--background2); */
 }
 
 #font{
@@ -148,88 +155,85 @@ body{
     background-color: #fff;
 }
 
-/* .r1{
-    height: var(--size);
-}
-
-.r2{
-    height: calc(100% - var(--size));
-}
-
-.c1{
-    width: var(--size);
-}
-
-.c2{
-    width: calc(100% - var(--size));
-} */
-
-
-
 #main-sheet{
+    width: 100%;
     height: 81vh;
     border-top: var(--border-thick);
     border-left: var(--border-thick);
-    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow: scroll; */
     position: relative;
 }
 
-.rowCont-row{
-    display: flex;
-}
-
 #select-all{
-    min-width: var(--cell-width);
+    width: var(--cell-width);
     height: var(--cell-height);
     border-right: var(--border-thick);
     border-bottom: var(--border-thick);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
 }
 
-.rc-name{
-    min-width: var(--cell-width);
+#col-name-cont{
+    width: calc(100% - var(--cell-width));
     height: var(--cell-height);
+    display: flex;
+    overflow: scroll;
+}
+
+.col-name{
+    min-width: var(--cell-width);
     border-right: var(--border-thin);
-    border-bottom: var(--border-thin);
-    font-size: small;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-bottom: var(--border-thick);
     box-sizing: border-box;
 }
 
-.br-thick{
-    border-right: var(--border-thick);
+#row-name-cont{
+    min-width: var(--cell-width);
+    height: calc(100% - var(--cell-height));
+    overflow: scroll;
 }
 
-.bb-thick{
-    border-bottom: var(--border-thick);
+.row-name{
+    height: var(--cell-height);
+    border-right: var(--border-thick);
+    border-bottom: var(--border-thin);
+    box-sizing: border-box;
+}
+
+#cells-cont{
+    width: calc(100% - var(--cell-width));
+    height: calc(100% - var(--cell-height));
+    overflow: scroll;
+}
+
+.cells-cont-row{
+    display: flex;
 }
 
 .cell{
     min-width: var(--cell-width);
     height: var(--cell-height);
+    padding: 0px 2px;
     border-right: var(--border-thin);
     border-bottom: var(--border-thin);
-    text-align: center;
+    font-size: medium;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     overflow-x: scroll;
     overflow-y: hidden;
     box-sizing: border-box;
     outline: none;
+    cursor: default;
 }
 
 ::-webkit-scrollbar{
     display: none;
 }
 
-.selected{
+.selected-cell{
     border: 2px solid var(--background1);
+    cursor: auto;
 }
 
 .formula-bar{
@@ -267,4 +271,32 @@ body{
 
 #formula{
     width: calc(100% - 225px);
+}
+
+.bt{
+    border-top: var(--border-green);
+}
+
+.bb{
+    border-bottom: var(--border-green);
+}
+
+.bl{
+    border-left: var(--border-green);
+}
+
+.br{
+    border-right: var(--border-green);
+}
+
+.bold{
+    font-weight: 700 !important;
+}
+
+.italic{
+    font-style: italic !important;
+}
+
+.underline{
+    text-decoration: underline !important;
 }
