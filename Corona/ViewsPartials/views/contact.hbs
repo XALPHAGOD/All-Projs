@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>links}}
+    <title>Contact</title>
+</head>
+
+<body>
+    {{>navbar}}
+    <div id="d" style="display: flex;flex-direction: column;align-items: center;">
+        <h2 style="margin: 50px;font-family: Georgia, 'Times New Roman', Times, serif;text-align: center;">You wanna
+            Contact
+            Me, huh?</h2>
+        <h5 id="ans" style="margin: 50px;font-family: Georgia, 'Times New Roman', Times, serif;text-align: center;">Well
+            it
+            doesn't work that way.</h5>
+        <h1 id="cmd" style="margin: 50px;font-family: Georgia, 'Times New Roman', Times, serif;text-align: center;">I'll
+            contact
+            you!!!</h1>
+    </div>
+    <h1 id="jk" style="margin: 20px;font-family: Georgia, 'Times New Roman', Times, serif;text-align: center;">Just
+        Kidding...</h1>
+    <h3 id="mm" style="margin: 20px;font-family: Georgia, 'Times New Roman', Times, serif;text-align: center;">Mail Me:
+        xalphagod1990@gmail.com</h3>
+    {{>footer}}
+    {{>js}}
+    <script>
+        const ans = document.getElementById("ans");
+        const cmd = document.getElementById("cmd");
+        const d = document.getElementById("d");
+        const jk = document.getElementById("jk");
+        const mm = document.getElementById("mm");
+        ans.style.visibility = "hidden";
+        cmd.style.visibility = "hidden";
+        jk.style.display = "none";
+        mm.style.display = "none";
+        setTimeout(() => ans.style.visibility = "visible", 2500);
+        setTimeout(() => cmd.style.visibility = "visible", 5500);
+        setTimeout(() => {
+            d.style.display = "none"
+            jk.style.display = "block";
+        }, 9500);
+        setTimeout(() => mm.style.display = "block", 12500);
+    </script>
+</body>
+
+</html>
